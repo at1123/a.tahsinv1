@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHNAF TAHSIN LOG</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        .login-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #0c47b8;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body> <a href="index2.html"></a>
+    <div class="login-container">
+        <!-- Logo Image -->
+        <img src="logo.jpg" alt="Logo">
+
+        <!-- Login Form Title -->
+        <h2>You, who passed the previous step means your iq is very good, otherwise you are a programmer. Now enter the password again.</h2>
+
+        <!-- Username Input -->
+        <input type="text" id="username" placeholder="Enter username" required>
+
+        <!-- Password Input -->
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <!-- Login Button -->
+        <button onclick="login()">Login</button>
+
+        <!-- Error Message -->
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- JavaScript for Login Functionality -->
+    <script>
+        function login() {
+            // Retrieve input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Correct credentials
+            var correctUsername = '10';
+            var correctPassword = '1616';
+
+            // Check credentials
+            if (username === correctUsername && password === correctPassword) {
+                // Redirect to another page if credentials are correct
+                window.location.href = 'i am a programmer.html';
+            } else {
+                // Show error message if credentials are incorrect
+                document.getElementById('error-message').textContent = 'Invalid username or password. Please try again.';
+            }
+        }
+    </script>
+</body>
+</html>
